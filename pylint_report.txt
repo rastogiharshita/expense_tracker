@@ -1,0 +1,26 @@
+************* Module data_models
+data_models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+data_models.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module db_utils
+db_utils.py:11:0: C0301: Line too long (154/100) (line-too-long)
+db_utils.py:14:0: C0305: Trailing newlines (trailing-newlines)
+db_utils.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+db_utils.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+db_utils.py:9:4: C0116: Missing function or method docstring (missing-function-docstring)
+db_utils.py:13:8: W0612: Unused variable 'session' (unused-variable)
+db_utils.py:6:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module main
+main.py:25:0: C0116: Missing function or method docstring (missing-function-docstring)
+main.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
+main.py:47:0: C0116: Missing function or method docstring (missing-function-docstring)
+main.py:4:0: C0411: standard import "datetime.datetime" should be placed before third party import "fastapi.FastAPI" (wrong-import-order)
+************* Module utils
+utils.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+utils.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+utils.py:6:4: C0116: Missing function or method docstring (missing-function-docstring)
+utils.py:7:13: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+utils.py:4:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+
+------------------------------------------------------------------
+Your code has been rated at 5.71/10 (previous run: 5.71/10, +0.00)
+

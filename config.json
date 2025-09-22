@@ -1,0 +1,12 @@
+{
+  "database": {
+    "driver": "postgresql",
+    "username": "postgres",
+    "host": "localhost",
+    "password": "password",
+    "port": 5432,
+    "db_name": "expense_tracker"
+  },
+  "TRACK_DB_MODIFICATIONS": true,
+  "pylint_report_path": "C:\\Users\\CD988GR\\Downloads\\"
+}
