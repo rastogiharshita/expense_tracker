@@ -12,3 +12,10 @@ class Transactions(Base):
     amount = Column(Float)
     currency = Column(String(length=256))
     created_at = Column(TIMESTAMP, default=datetime.now, primary_key=True)
+
+
+class Users(Base):
+    __tablename__ = 'users'
+
+    username = Column(String(length=256), primary_key=True)
+    password = Column(String)

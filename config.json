@@ -7,6 +7,9 @@
     "port": 5432,
     "db_name": "expense_tracker"
   },
-  "TRACK_DB_MODIFICATIONS": true,
-  "pylint_report_path": "C:\\Users\\CD988GR\\Downloads\\"
+  "pylint_report_path": "C:\\Users\\CD988GR\\Downloads\\",
+  "jwt": {
+    "expiry_in_minutes": 60,
+    "secret_key": "e517fc027da72a3c040408c6ddefe494fe5fea6751a0c6aaf7a63ddfafa82874"
+  }
 }

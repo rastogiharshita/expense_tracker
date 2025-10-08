@@ -1,8 +1,8 @@
 import pandas as pd
 
 from db_utils import DatabaseUtils
-from db_models import Transactions
-from data_models import Transaction, TransactionList
+from db_models import *
+from data_models import *
 
 
 class Query:
@@ -24,3 +24,29 @@ class Query:
             session.add(trc)
         return 'Transaction added !'
 
+    @classmethod
+    def add_user(cls, user: User):
+        with DatabaseUtils.session_scope() as session:
+            session.add(Users(**user.dict()))
+            return 'User added !'
+
+    @classmethod
+    def delete_user(cls, user: str):
+        with DatabaseUtils.session_scope() as session:
+            sq = session.query(Users)
+            if user is not None:
+                sq = sq.filter(Users.username == user)
+            sq.delete(synchronize_session=False)
+            return "User deleted !"
+
+    @classmethod
+    def get_users(cls, user: User | None = None, view_only=True):
+        with DatabaseUtils.session_scope() as session:
+            sq = session.query(Users)
+            if user is not None:
+                sq = sq.filter(Users.username == user.username)
+            results = sq.all()
+            if view_only:
+                return UserViewList.model_validate(results).model_dump()
+            else:
+                return UserList.model_validate(results).model_dump()

@@ -15,9 +15,6 @@ class DatabaseUtils:
         db_uri = f"{db_config['driver']}://{db_config['username']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['db_name']}"
         cls.__engine = create_engine(db_uri, echo=True)
         cls.__session = sessionmaker(bind=cls.__engine)
-        # todo: auto-create all tables
-        Base.metadata.create_all(cls.__engine)
-        # session = sessionmaker(autocommit=False, autoflush=False, bind=self.__engine)
 
     @classmethod
     def get_session(cls):
